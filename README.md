@@ -30,7 +30,9 @@ The test files on this assignment are super important! Since you don't know what
 # From Scratch
 
 ## Question 1: `myForEach`
-Possibly the first HOF everyone uses is `array.forEach`, so lets build our own version! `myForEach` takes two arguments, an array and a callback function. You must pass each value from the given array into the provided callback (try a loop). The callback needs to be invoked by your function! And just like the real `forEach`, `myForEach` should return `undefined` and should not alter the passed in array by default. Your callback's return value should be ignored.
+Possibly the first HOF everyone uses is `array.forEach`, so lets build our own version! `myForEach` takes two arguments, an array and a callback function. You must pass each value from the given array into the provided callback (try a loop). The callback needs to be invoked by your function! Only pass the value to the callback (no need to pass anything else).
+
+And just like the real `forEach`, `myForEach` should return `undefined` and should not alter the passed in array by default. Your callback's return value should be ignored.
 
 ```js
 const myNames = ['Alice', 'Bob', 'Charlie', 'Debbie'];
