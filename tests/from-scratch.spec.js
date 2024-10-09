@@ -11,7 +11,7 @@ const {
   sortNumbersBetter,
   sortUsersByOrder,
   sortUsersByName,
-} = require('./from-scratch');
+} = require('../src/from-scratch');
 
 const testSuiteName = 'From Scratch Tests';
 const scoresDir = path.join(__dirname, '..', 'scores');

@@ -5,7 +5,7 @@ const {
   sortUsersBy,
   logEachName,
   logEachUserBio,
-} = require('./debug');
+} = require('../src/debug');
 
 const testSuiteName = 'Debug Tests';
 const scoresDir = path.join(__dirname, '..', 'scores');
@@ -65,7 +65,7 @@ describe(testSuiteName, () => {
 
     // remember, this is how Jest lets us check and see if console.log was ever called.
     // we need to "spy" on the method because there's no return value to check against
-    const logSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
+    const logSpy = jest.spyOn(console, 'log').mockImplementation(() => { });
     logEachName(names);
 
     expect(logSpy).toHaveBeenCalledTimes(4);
@@ -88,7 +88,7 @@ describe(testSuiteName, () => {
       { name: 'Diana', bio: 'Diana is a doctor' },
     ];
 
-    const logSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
+    const logSpy = jest.spyOn(console, 'log').mockImplementation(() => { });
     logEachUserBio(users);
 
     expect(logSpy).toHaveBeenCalledTimes(4);
