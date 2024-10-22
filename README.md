@@ -84,7 +84,7 @@ const namesWithB = myFilter(myNames, (name) => name.includes('B'));
 console.log(namesWithB); // ['Bob', 'Barry']
 
 const namesWithZ = myFilter(myNames, (name) => name.includes('Z'));
-console.log(nameHasZ); // []
+console.log(namesWithZ); // []
 ```
 
 ### Question 5: sortWords
