@@ -33,7 +33,9 @@ And just like the real `forEach`, `myForEach` should return `undefined` and shou
 
 ```js
 const myNames = ['Alice', 'Bob', 'Charlie', 'Debbie'];
-const result = myForEach(myNames, (name) => console.log(`Hi, ${name}!`));
+const result = myForEach(myNames, (name) => {
+  console.log(`Hi, ${name}!`)
+});
 /* That will log */
 // Hi, Alice!
 // Hi, Bob!
