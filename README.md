@@ -1,4 +1,4 @@
-# Assignment 1.2.0 - HOFs and Callbacks
+# Callbacks & Higher Order Functions (HOFs)
 
 - [Before You start](#before-you-start)
 - [From Scratch](#from-scratch)
@@ -118,7 +118,9 @@ Write a function called `myForEach` that takes two arguments, an `array` and a `
 
 ```js
 const myNames = ['Alice', 'Bob', 'Charlie', 'Debbie'];
-const result = myForEach(myNames, (name) => console.log(`Hi, ${name}!`));
+const result = myForEach(myNames, (name) => {
+  console.log(`Hi, ${name}!`)
+});
 /* That will log */
 // Hi, Alice!
 // Hi, Bob!
