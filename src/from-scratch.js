@@ -1,39 +1,32 @@
-const myForEach = () => {
-};
+// Create callback functions for Higher-Order Functions:
+const logEachValue = () => { };
 
-const myMap = () => {
-};
+const makePeopleHappy = () => { };
 
-const myFind = () => {
-};
+const getEvenNumbers = () => { };
 
-const myFilter = () => {
-};
+const doubleEveryNumber = () => { };
 
-const sortWords = () => {
-};
+const convertToBooleans = () => { };
 
-const sortNumbers = () => {
-};
+// Create your own Higher Order Functions:
+const myForEach = () => { };
 
-const sortNumbersBetter = () => {
-};
+const myMap = () => { };
 
-const sortUsersByOrder = () => {
-};
+const myFilter = () => { };
 
-const sortUsersByName = () => {
-};
+const myFind = () => { };
 
+// Use Array.sort() and provide the correct callback sorting function:
 module.exports = {
+  logEachValue,
+  makePeopleHappy,
+  getEvenNumbers,
+  doubleEveryNumber,
+  convertToBooleans,
   myForEach,
   myMap,
   myFind,
   myFilter,
-
-  sortWords,
-  sortNumbers,
-  sortNumbersBetter,
-  sortUsersByOrder,
-  sortUsersByName,
 };

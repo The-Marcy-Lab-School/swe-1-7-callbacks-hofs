@@ -5,8 +5,8 @@ const myEvery = (arr, callback) => {
   return true;
 };
 
-const sortUsersBy = (users, sortingFunction) => {
-  return [...users].sort(sortingFunction());
+const sortUsersBy = (users, sortingCallback) => {
+  return [...users].sort(sortingCallback());
 };
 
 const logEachName = (names) => {

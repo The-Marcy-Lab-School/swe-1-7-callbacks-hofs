@@ -1,5 +1,11 @@
 {
   "testScores": {
+    "Debug Tests": {
+      "DeTe1": 0,
+      "DeTe2": 0,
+      "DeTe3": 0,
+      "DeTe4": 0
+    },
     "From Scratch Tests": {
       "FrScTe1": 0,
       "FrScTe2": 0,
@@ -14,64 +20,52 @@
       "FrScTe11": 0,
       "FrScTe12": 0,
       "FrScTe13": 0,
-      "FrScTe14": 0,
-      "FrScTe15": 0,
-      "FrScTe16": 0
-    },
-    "Debug Tests": {
-      "DeTe1": 0,
-      "DeTe2": 0,
-      "DeTe3": 0,
-      "DeTe4": 0
+      "FrScTe14": 0
     }
   },
   "idToTestNameHash": {
-    "FrScTe1": "From Scratch Tests myForEach - calls the provided callback on each element of the array",
-    "FrScTe2": "From Scratch Tests myForEach - does not return anything",
-    "FrScTe3": "From Scratch Tests myForEach - does not mutate the original array by default",
-    "FrScTe4": "From Scratch Tests myMap - returns a new array with the results of the callbacks return values",
-    "FrScTe5": "From Scratch Tests myMap - does not mutate the original array",
-    "FrScTe6": "From Scratch Tests myFind - returns the first element that makes the callback return a truthy value",
-    "FrScTe7": "From Scratch Tests myFind - returns undefined if no element makes the callback return a truthy value",
-    "FrScTe8": "From Scratch Tests myFilter - returns a new array with the elements that make the callback return a truthy value",
-    "FrScTe9": "From Scratch Tests myFilter - does not mutate the original array",
-    "FrScTe10": "From Scratch Tests sortWords - returns a sorted list of words alphabetically",
-    "FrScTe11": "From Scratch Tests sortWords - does not modify the original array",
-    "FrScTe12": "From Scratch Tests sortNumbers - returns a sorted a list of numbers in ascending order",
-    "FrScTe13": "From Scratch Tests sortNumbersBetter - sorts a list of numbers in ascending order by default",
-    "FrScTe14": "From Scratch Tests sortNumbersBetter - sorts a list of numbers in descending order if specified",
-    "FrScTe15": "From Scratch Tests sortUsersByOrder - sorts a list of users by \"order\" property",
-    "FrScTe16": "From Scratch Tests sortUsersByName - sorts a list of users by name",
     "DeTe1": "Debug Tests myEvery - returns true if all values in the array make the callback return a truthy value",
     "DeTe2": "Debug Tests sortUsersBy - sorts users by the given sorting function",
     "DeTe3": "Debug Tests logEachName - logs each user to the console",
-    "DeTe4": "Debug Tests logEachUserBio - logs each user bio to the console"
+    "DeTe4": "Debug Tests logEachUserBio - logs each user bio to the console",
+    "FrScTe1": "From Scratch Tests logEachValue - logs out each value of the given array with the right string, return nothing",
+    "FrScTe2": "From Scratch Tests makePeopleHappy - sets the isHappy property of each person to true, returns nothing",
+    "FrScTe3": "From Scratch Tests getEvenNumbers - returns a new array with only the even numbers from the given array",
+    "FrScTe4": "From Scratch Tests doubleEveryNumber - returns a new array with each number doubled",
+    "FrScTe5": "From Scratch Tests convertToBooleans - returns a new array with each value converted to a boolean",
+    "FrScTe6": "From Scratch Tests myForEach - calls the provided callback on each element of the array",
+    "FrScTe7": "From Scratch Tests myForEach - does not return anything",
+    "FrScTe8": "From Scratch Tests myForEach - does not mutate the original array by default",
+    "FrScTe9": "From Scratch Tests myMap - returns a new array with the results of the callbacks return values",
+    "FrScTe10": "From Scratch Tests myMap - does not mutate the original array",
+    "FrScTe11": "From Scratch Tests myFilter - returns a new array with the elements that make the callback return a truthy value",
+    "FrScTe12": "From Scratch Tests myFilter - does not mutate the original array",
+    "FrScTe13": "From Scratch Tests myFind - returns the first element that makes the callback return a truthy value",
+    "FrScTe14": "From Scratch Tests myFind - returns undefined if no element makes the callback return a truthy value"
   },
   "testNameToIdHash": {
-    "From Scratch Tests myForEach - calls the provided callback on each element of the array": "FrScTe1",
-    "From Scratch Tests myForEach - does not return anything": "FrScTe2",
-    "From Scratch Tests myForEach - does not mutate the original array by default": "FrScTe3",
-    "From Scratch Tests myMap - returns a new array with the results of the callbacks return values": "FrScTe4",
-    "From Scratch Tests myMap - does not mutate the original array": "FrScTe5",
-    "From Scratch Tests myFind - returns the first element that makes the callback return a truthy value": "FrScTe6",
-    "From Scratch Tests myFind - returns undefined if no element makes the callback return a truthy value": "FrScTe7",
-    "From Scratch Tests myFilter - returns a new array with the elements that make the callback return a truthy value": "FrScTe8",
-    "From Scratch Tests myFilter - does not mutate the original array": "FrScTe9",
-    "From Scratch Tests sortWords - returns a sorted list of words alphabetically": "FrScTe10",
-    "From Scratch Tests sortWords - does not modify the original array": "FrScTe11",
-    "From Scratch Tests sortNumbers - returns a sorted a list of numbers in ascending order": "FrScTe12",
-    "From Scratch Tests sortNumbersBetter - sorts a list of numbers in ascending order by default": "FrScTe13",
-    "From Scratch Tests sortNumbersBetter - sorts a list of numbers in descending order if specified": "FrScTe14",
-    "From Scratch Tests sortUsersByOrder - sorts a list of users by \"order\" property": "FrScTe15",
-    "From Scratch Tests sortUsersByName - sorts a list of users by name": "FrScTe16",
     "Debug Tests myEvery - returns true if all values in the array make the callback return a truthy value": "DeTe1",
     "Debug Tests sortUsersBy - sorts users by the given sorting function": "DeTe2",
     "Debug Tests logEachName - logs each user to the console": "DeTe3",
-    "Debug Tests logEachUserBio - logs each user bio to the console": "DeTe4"
+    "Debug Tests logEachUserBio - logs each user bio to the console": "DeTe4",
+    "From Scratch Tests logEachValue - logs out each value of the given array with the right string, return nothing": "FrScTe1",
+    "From Scratch Tests makePeopleHappy - sets the isHappy property of each person to true, returns nothing": "FrScTe2",
+    "From Scratch Tests getEvenNumbers - returns a new array with only the even numbers from the given array": "FrScTe3",
+    "From Scratch Tests doubleEveryNumber - returns a new array with each number doubled": "FrScTe4",
+    "From Scratch Tests convertToBooleans - returns a new array with each value converted to a boolean": "FrScTe5",
+    "From Scratch Tests myForEach - calls the provided callback on each element of the array": "FrScTe6",
+    "From Scratch Tests myForEach - does not return anything": "FrScTe7",
+    "From Scratch Tests myForEach - does not mutate the original array by default": "FrScTe8",
+    "From Scratch Tests myMap - returns a new array with the results of the callbacks return values": "FrScTe9",
+    "From Scratch Tests myMap - does not mutate the original array": "FrScTe10",
+    "From Scratch Tests myFilter - returns a new array with the elements that make the callback return a truthy value": "FrScTe11",
+    "From Scratch Tests myFilter - does not mutate the original array": "FrScTe12",
+    "From Scratch Tests myFind - returns the first element that makes the callback return a truthy value": "FrScTe13",
+    "From Scratch Tests myFind - returns undefined if no element makes the callback return a truthy value": "FrScTe14"
   },
   "humanReadable": {
-    "From Scratch Tests": "0/16",
-    "finalTestScore": "FINAL SCORE: 0/20",
-    "Debug Tests": "0/4"
+    "Debug Tests": "0/4",
+    "finalTestScore": "FINAL SCORE: 0/18",
+    "From Scratch Tests": "0/14"
   }
 }
