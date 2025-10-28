@@ -64,13 +64,6 @@ git commit -m 'message' # create a commit with the changes
 git push                # push the new commit to the remote repo
 ```
 
-## Before You start
-Callbacks are an integral part of the JS ecosystem. JS has a ton of built in Higher Order Functions (HOFs) that use callbacks, and you'll learn a bunch of them tomorrow. But tonight, let's try building some of those HOFs ourselves! We want to demystify how JS uses callbacks so when you use them yourself, you'll see there's no magic involved.
-
-> __*Since the challenge is to build from scratch, you can't use the real `array.forEach`, `array.map`, `array.find`, `array.filter` methods on this assignment*__
-
-The test files on this assignment are super important! Since you don't know what callback will be passed into your HOF, you can get a better idea of what you should be doing by reading the tests.
-
 ## From Scratch Questions
 
 These first questions involve making callbacks for higher-order functions.
