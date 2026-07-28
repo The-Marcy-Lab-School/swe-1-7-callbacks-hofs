@@ -19,6 +19,7 @@ module.exports = {
     'func-style': 2,
     'arrow-body-style': 'off',
     'no-continue': 'off',
+    'no-param-reassign': 'off',
     quotes: ['error', 'single', { allowTemplateLiterals: true, avoidEscape: true }],
     'consistent-return': 'off',
     'no-restricted-syntax': 'off',
