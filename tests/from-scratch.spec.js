@@ -1,5 +1,3 @@
-const path = require('path');
-const ScoreCounter = require('score-tests');
 const {
   logEachValue,
   makePeopleHappy,
@@ -13,8 +11,6 @@ const {
 } = require('../src/from-scratch');
 
 const testSuiteName = 'From Scratch Tests';
-const scoresDir = path.join(__dirname, '..', 'scores');
-const scoreCounter = new ScoreCounter(testSuiteName, scoresDir);
 
 describe(testSuiteName, () => {
   it('logEachValue - logs out each value of the given array with the right string, return nothing', () => {
@@ -40,8 +36,6 @@ describe(testSuiteName, () => {
     expect(names).toEqual(['Zo', 'Maya', 'Carms']);
 
     spy.mockRestore();
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('makePeopleHappy - sets the isHappy property of each person to true, returns nothing', () => {
@@ -59,8 +53,6 @@ describe(testSuiteName, () => {
       { name: 'Maya', isHappy: true },
       { name: 'Carms', isHappy: true },
     ]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('getEvenNumbers - returns a new array with only the even numbers from the given array', () => {
@@ -75,8 +67,6 @@ describe(testSuiteName, () => {
     const untouched = [10, 21, 83];
     getEvenNumbers(untouched);
     expect(untouched).toEqual([10, 21, 83]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('doubleEveryNumber - returns a new array with each number doubled', () => {
@@ -89,8 +79,6 @@ describe(testSuiteName, () => {
     const untouched = [10, 21, 83];
     doubleEveryNumber(untouched);
     expect(untouched).toEqual([10, 21, 83]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('convertToBooleans - returns a new array with each value converted to a boolean', () => {
@@ -107,8 +95,6 @@ describe(testSuiteName, () => {
     const untouched = [10, 21, 83];
     convertToBooleans(untouched);
     expect(untouched).toEqual([10, 21, 83]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('myForEach - calls the provided callback on each element of the array', () => {
@@ -125,8 +111,6 @@ describe(testSuiteName, () => {
     expect(mockFunction).toHaveBeenCalledWith(names[0]);
     expect(mockFunction).toHaveBeenCalledWith(names[1]);
     expect(mockFunction).toHaveBeenCalledWith(names[2]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('myForEach - does not return anything', () => {
@@ -137,8 +121,6 @@ describe(testSuiteName, () => {
 
     expect(result).toBeUndefined();
     expect(doubledNums).toEqual([2, 4, 6]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('myForEach - does not mutate the original array by default', () => {
@@ -154,8 +136,6 @@ describe(testSuiteName, () => {
 
     expect(result).toBeUndefined();
     expect(doubledNums).toEqual([2, 4, 6]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('myMap - returns a new array with the results of the callbacks return values', () => {
@@ -166,8 +146,6 @@ describe(testSuiteName, () => {
     const names = ['Alice', 'Bob', 'Charlie'];
     const nameLengths = myMap(names, (name) => name.length);
     expect(nameLengths).toEqual([5, 3, 7]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('myMap - does not mutate the original array', () => {
@@ -176,8 +154,6 @@ describe(testSuiteName, () => {
 
     expect(nums).toEqual([1, 2, 3]);
     expect(doubled).toEqual([2, 4, 6]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('myFilter - returns a new array with the elements that make the callback return a truthy value', () => {
@@ -201,8 +177,6 @@ describe(testSuiteName, () => {
       { name: 'Bob', height: 32 },
       { name: 'Diana', height: 40 },
     ]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('myFilter - does not mutate the original array', () => {
@@ -211,8 +185,6 @@ describe(testSuiteName, () => {
 
     expect(nums).toEqual([1, 2, 3]);
     expect(evens).toEqual([2]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('myFind - returns the first element that makes the callback return a truthy value', () => {
@@ -233,8 +205,6 @@ describe(testSuiteName, () => {
 
     const firstTallUser = myFind(users, (user) => user.height > 30);
     expect(firstTallUser).toEqual({ name: 'Bob', height: 32 });
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('myFind - returns undefined if no element makes the callback return a truthy value', () => {
@@ -245,11 +215,5 @@ describe(testSuiteName, () => {
     // repeated to prevent auto pass
     const firstOdd = myFind(nums, (num) => num % 2);
     expect(firstOdd).toBe(1);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
-
-  // IGNORE PLEASE
-  beforeEach(() => scoreCounter.add(expect));
-  afterAll(scoreCounter.export);
 });

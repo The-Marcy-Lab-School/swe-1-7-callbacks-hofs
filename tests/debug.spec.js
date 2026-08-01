@@ -1,5 +1,3 @@
-const path = require('path');
-const ScoreCounter = require('score-tests');
 const {
   myEvery,
   sortUsersBy,
@@ -8,8 +6,6 @@ const {
 } = require('../src/debug');
 
 const testSuiteName = 'Debug Tests';
-const scoresDir = path.join(__dirname, '..', 'scores');
-const scoreCounter = new ScoreCounter(testSuiteName, scoresDir);
 
 describe(testSuiteName, () => {
   it('myEvery - returns true if all values in the array make the callback return a truthy value', () => {
@@ -29,8 +25,6 @@ describe(testSuiteName, () => {
     const shortWords = ['a', 'be', 'see', 'd'];
     const areAllLongWords2 = myEvery(shortWords, wordLongerThan4);
     expect(areAllLongWords2).toBe(false);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('sortUsersBy - sorts users by the given sorting function', () => {
@@ -56,8 +50,6 @@ describe(testSuiteName, () => {
       { name: 'Charlie', height: 28 },
       { name: 'Diana', height: 40 },
     ]);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('logEachName - logs each user to the console', () => {
@@ -76,8 +68,6 @@ describe(testSuiteName, () => {
     expect(logSpy).toHaveBeenNthCalledWith(3, 'Charlie', 2, ['Alice', 'Bob', 'Charlie', 'Diana']);
     expect(logSpy).toHaveBeenNthCalledWith(4, 'Diana', 3, ['Alice', 'Bob', 'Charlie', 'Diana']);
     logSpy.mockRestore();
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('logEachUserBio - logs each user bio to the console', () => {
@@ -97,11 +87,5 @@ describe(testSuiteName, () => {
     expect(logSpy).toHaveBeenNthCalledWith(3, 'Charlie is a student');
     expect(logSpy).toHaveBeenNthCalledWith(4, 'Diana is a doctor');
     logSpy.mockRestore();
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
-
-  // IGNORE PLEASE
-  beforeEach(() => scoreCounter.add(expect));
-  afterAll(scoreCounter.export);
 });
