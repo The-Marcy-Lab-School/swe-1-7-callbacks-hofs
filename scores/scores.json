@@ -1,0 +1,71 @@
+{
+  "testScores": {
+    "Debug Tests": {
+      "DeTe1": 0,
+      "DeTe2": 0,
+      "DeTe3": 0,
+      "DeTe4": 0
+    },
+    "From Scratch Tests": {
+      "FrScTe1": 0,
+      "FrScTe2": 0,
+      "FrScTe3": 0,
+      "FrScTe4": 0,
+      "FrScTe5": 0,
+      "FrScTe6": 0,
+      "FrScTe7": 0,
+      "FrScTe8": 1,
+      "FrScTe9": 0,
+      "FrScTe10": 0,
+      "FrScTe11": 0,
+      "FrScTe12": 0,
+      "FrScTe13": 0,
+      "FrScTe14": 1
+    }
+  },
+  "idToTestNameHash": {
+    "DeTe1": "Debug Tests my_every - returns True if every value makes the callback return True",
+    "DeTe2": "Debug Tests sort_users_by - sorts users by the given key function",
+    "DeTe3": "Debug Tests log_each_name - prints each name",
+    "DeTe4": "Debug Tests log_each_user_bio - prints each user's bio",
+    "FrScTe1": "From Scratch Tests log_each_value - prints each value with its index, returns nothing",
+    "FrScTe2": "From Scratch Tests make_people_happy - sets is_happy on each person to True, returns nothing",
+    "FrScTe3": "From Scratch Tests get_even_numbers - returns a new list of only the even numbers",
+    "FrScTe4": "From Scratch Tests double_every_number - returns a new list with each number doubled",
+    "FrScTe5": "From Scratch Tests convert_to_booleans - returns a new list with each value as a boolean",
+    "FrScTe6": "From Scratch Tests my_for_each - calls the provided callback on each element",
+    "FrScTe7": "From Scratch Tests my_for_each - does not return anything",
+    "FrScTe8": "From Scratch Tests my_for_each - does not mutate the original list by default",
+    "FrScTe9": "From Scratch Tests my_map - returns a new list of the callback's return values",
+    "FrScTe10": "From Scratch Tests my_map - does not mutate the original list",
+    "FrScTe11": "From Scratch Tests my_filter - returns a new list of the elements the callback keeps",
+    "FrScTe12": "From Scratch Tests my_filter - does not mutate the original list",
+    "FrScTe13": "From Scratch Tests my_find - returns the first element the callback accepts",
+    "FrScTe14": "From Scratch Tests my_find - returns None if no element makes the callback return True"
+  },
+  "testNameToIdHash": {
+    "Debug Tests my_every - returns True if every value makes the callback return True": "DeTe1",
+    "Debug Tests sort_users_by - sorts users by the given key function": "DeTe2",
+    "Debug Tests log_each_name - prints each name": "DeTe3",
+    "Debug Tests log_each_user_bio - prints each user's bio": "DeTe4",
+    "From Scratch Tests log_each_value - prints each value with its index, returns nothing": "FrScTe1",
+    "From Scratch Tests make_people_happy - sets is_happy on each person to True, returns nothing": "FrScTe2",
+    "From Scratch Tests get_even_numbers - returns a new list of only the even numbers": "FrScTe3",
+    "From Scratch Tests double_every_number - returns a new list with each number doubled": "FrScTe4",
+    "From Scratch Tests convert_to_booleans - returns a new list with each value as a boolean": "FrScTe5",
+    "From Scratch Tests my_for_each - calls the provided callback on each element": "FrScTe6",
+    "From Scratch Tests my_for_each - does not return anything": "FrScTe7",
+    "From Scratch Tests my_for_each - does not mutate the original list by default": "FrScTe8",
+    "From Scratch Tests my_map - returns a new list of the callback's return values": "FrScTe9",
+    "From Scratch Tests my_map - does not mutate the original list": "FrScTe10",
+    "From Scratch Tests my_filter - returns a new list of the elements the callback keeps": "FrScTe11",
+    "From Scratch Tests my_filter - does not mutate the original list": "FrScTe12",
+    "From Scratch Tests my_find - returns the first element the callback accepts": "FrScTe13",
+    "From Scratch Tests my_find - returns None if no element makes the callback return True": "FrScTe14"
+  },
+  "humanReadable": {
+    "Debug Tests": "0/4",
+    "From Scratch Tests": "2/14",
+    "finalTestScore": "FINAL SCORE: 2/18"
+  }
+}
