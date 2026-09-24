@@ -56,10 +56,12 @@ def test_log_each_user_bio(capsys):
         {"name": "Alice", "bio": "Alice is a software engineer"},
         {"name": "Bob", "bio": "Bob is a teacher"},
         {"name": "Charlie", "bio": "Charlie is a student"},
+        {"name": "Diana", "bio": "Diana is a doctor"},
     ]
     log_each_user_bio(users)
     assert printed(capsys) == [
         "Alice is a software engineer",
         "Bob is a teacher",
         "Charlie is a student",
+        "Diana is a doctor",
     ]

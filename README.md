@@ -113,6 +113,9 @@ Write your solutions in `src/from_scratch.py`.
 Write a function `log_each_value` that takes a list and prints each value
 along with its index. It returns nothing and leaves the list alone.
 
+This one wants a **side effect** for every value: you print, you change
+nothing, you return nothing.
+
 ```text
 Value: a, index: 0.
 Value: b, index: 1.
@@ -128,10 +131,16 @@ Write a function `make_people_happy` that takes a list of people dictionaries
 and sets `is_happy` to `True` on every one. It changes them in place and
 returns nothing.
 
+Here you *do* want to change the originals. Building a new list would leave
+the caller's people exactly as unhappy as they started.
+
 ### Question 3: `get_even_numbers`
 
 Write a function `get_even_numbers` that returns a **new** list of only the
 even numbers. The original list is untouched.
+
+You want the values that pass a test, so the answer is a **subset**: the same
+values, fewer of them. That is what `filter` is for.
 
 ```python
 get_even_numbers([2, 4, 6, 8, 10, 11])   # [2, 4, 6, 8, 10]
@@ -144,6 +153,9 @@ Careful: `0` is even, and so are negative numbers.
 Write a function `double_every_number` that returns a **new** list with every
 number doubled.
 
+You want a **transformed copy**: one value out for every value in, each one
+changed. That is what `map` is for.
+
 ```python
 double_every_number([2, -4, 6])   # [4, -8, 12]
 ```
@@ -152,6 +164,8 @@ double_every_number([2, -4, 6])   # [4, -8, 12]
 
 Write a function `convert_to_booleans` that returns a **new** list with every
 value converted to `True` or `False`.
+
+Another transformed copy, so the same shape as question 4.
 
 ```python
 convert_to_booleans([1, 0, -3])       # [True, False, True]

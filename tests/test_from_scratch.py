@@ -124,6 +124,12 @@ def test_my_for_each_does_not_mutate():
     my_for_each(nums, lambda num: num / 2)
     assert nums == [1, 2, 3]
 
+    # repeated so a do-nothing implementation cannot pass this test
+    doubled = []
+    result = my_for_each(nums, lambda num: doubled.append(num * 2))
+    assert result is None
+    assert doubled == [2, 4, 6]
+
 
 def test_my_map():
     """my_map - returns a new list of the callback's return values"""
@@ -167,10 +173,22 @@ def test_my_filter_does_not_mutate():
 def test_my_find():
     """my_find - returns the first element the callback accepts"""
     assert my_find([1, 2, 3], lambda num: num % 2 == 0) == 2
-    assert my_find(["Alice", "Bob", "Charlie"], lambda n: len(n) > 3) == "Alice"
+    assert my_find(["Alice", "Bob", "Charlie"], lambda n: len(n) > 5) == "Charlie"
+
+    users = [
+        {"name": "Alice", "height": 22},
+        {"name": "Bob", "height": 32},
+        {"name": "Charlie", "height": 28},
+        {"name": "Diana", "height": 40},
+    ]
+    assert my_find(users, lambda u: u["height"] > 30) == {"name": "Bob", "height": 32}
 
 
 def test_my_find_returns_none():
     """my_find - returns None if no element makes the callback return True"""
-    assert my_find([1, 3, 5], lambda num: num % 2 == 0) is None
+    nums = [1, 3, 5]
+    assert my_find(nums, lambda num: num % 2 == 0) is None
     assert my_find([], lambda num: True) is None
+
+    # repeated so always returning None cannot pass this test
+    assert my_find(nums, lambda num: num % 2) == 1
