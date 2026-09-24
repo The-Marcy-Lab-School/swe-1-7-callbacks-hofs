@@ -165,8 +165,17 @@ contain something even though that something is itself falsy. HmmmmMMMMmmm?
 
 ### Question 6: `my_for_each`
 
-Write a function `my_for_each` that takes a list and a callback, and calls the
-callback on every value. It returns nothing.
+The next four questions rebuild popular higher-order functions from scratch.
+Probably the first one everybody meets is a loop over every item, so let's
+build our own.
+
+Write a function `my_for_each` that takes two arguments: a list `values` and a
+`callback` function. It should:
+
+- Iterate through the provided list. On each iteration:
+  - Call the `callback` with the value at the current index as its only
+    argument
+- Not return anything
 
 ```python
 doubled = []
@@ -174,13 +183,27 @@ my_for_each([1, 2, 3], lambda num: doubled.append(num * 2))
 print(doubled)   # [2, 4, 6]
 ```
 
-This is your own version of a loop that somebody else wrote. Four lines, and
-then you understand every HOF you will ever use.
+This is your own version of a loop somebody else already wrote for you. Four
+lines, and then you understand every higher-order function you will ever
+use.
 
 ### Question 7: `my_map`
 
-Write a function `my_map` that takes a list and a callback, and returns a
-**new** list of whatever the callback returned for each value.
+The real `map` is great for making modified copies of a list. It applies a
+callback that transforms every value, and gives you back the transformed
+ones.
+
+Write a function `my_map` that takes two arguments: a list `values` and a
+`callback` function. It should:
+
+- Create a new list to return
+- Iterate through the input list. On each iteration:
+  - Call the `callback` with the value at the current index as its only
+    argument
+  - Take the value the `callback` returned and add it to the new list
+- Return the new list of transformed values
+
+Do not modify the original list!
 
 ```python
 my_map([1, 2, 3], lambda num: num * 2)   # [2, 4, 6]
@@ -191,8 +214,22 @@ Note the second example passes `len` itself, with no parentheses.
 
 ### Question 8: `my_filter`
 
-Write a function `my_filter` that takes a list and a callback, and returns a
-**new** list of only the values the callback said `True` to.
+Where `my_find` gets the *first* value that passes a test, `filter` gets
+**all** of them.
+
+Write a function `my_filter` that takes two arguments: a list `values` and a
+`callback` function. It should:
+
+- Create a new list to return
+- Iterate through the input list. On each iteration:
+  - Call the `callback` with the value at the current index as its only
+    argument
+  - If what the `callback` returned is truthy, **add the value at the current
+    index to the new list**
+  - Otherwise do nothing and carry on to the next value
+- Return the new list of values that passed
+
+Do not modify the original list!
 
 ```python
 my_filter([10, 50, 100], lambda n: n > 50)   # [100]
@@ -200,8 +237,19 @@ my_filter([10, 50, 100], lambda n: n > 50)   # [100]
 
 ### Question 9: `my_find`
 
-Write a function `my_find` that returns the **first** value the callback says
-`True` to, or `None` if there is no such value.
+When you want to *find* a value in a list, this is the one to reach for. It
+uses a callback to test each value, and returns the first value that passes.
+
+Write a function `my_find` that takes two arguments: a list `values` and a
+`callback` function. It should:
+
+- Iterate through the input list. On each iteration:
+  - Call the `callback` with the value at the current index as its only
+    argument
+  - If what the `callback` returned is truthy, **return the value at the
+    current index**
+  - Otherwise do nothing and carry on to the next value
+- Return `None` if no value passes
 
 ```python
 my_find([1, 2, 3], lambda num: num % 2 == 0)   # 2
@@ -209,6 +257,10 @@ my_find([1, 3, 5], lambda num: num % 2 == 0)   # None
 ```
 
 Stop as soon as you find one. There is no point checking the rest.
+
+This is important: the **callback** returns `True` or `False`, while the
+**higher-order function** returns a value or `None`. Those are two different
+jobs, ok?
 
 ## Debug
 
