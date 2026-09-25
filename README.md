@@ -131,6 +131,18 @@ Write a function `make_people_happy` that takes a list of people dictionaries
 and sets `is_happy` to `True` on every one. It changes them in place and
 returns nothing.
 
+```python
+people = [
+    {"name": "Alice", "is_happy": False},
+    {"name": "Bob", "is_happy": False},
+]
+
+make_people_happy(people)
+
+print(people)
+# [{'name': 'Alice', 'is_happy': True}, {'name': 'Bob', 'is_happy': True}]
+```
+
 Here you *do* want to change the originals. Building a new list would leave
 the caller's people exactly as unhappy as they started.
 
